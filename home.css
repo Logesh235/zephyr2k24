@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00435e;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 58ch;
+}
+
+.container {
+  margin: 2em auto;
+  max-width: 40em;
+  width: 80%;
+}
+
+/* tablet device */
+
+.laptop {
+  background: radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, .4) 49%, transparent 50%) -26px 50%/20px 20px, linear-gradient(0deg, rgba(0, 0, 0, .4) 100%, transparent 0) calc(100% + 15px) 50%/6px 80px;
+  background-repeat: no-repeat;
+  border: 24px solid rgba(0, 0, 0, .3);
+  border-left-width: 32px;
+  border-radius: 15px;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, .4);
+  transition: background .5s ease-in-out;
+}
+
+/* mobile device */
+@media screen and (max-width: 40em) {
+  .laptop {
+    background: radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, .4) 49%, transparent 50%) 50% calc(100% + 36px)/30px 30px, linear-gradient(90deg, rgba(0, 0, 0, .4) 100%, transparent 0) 50% -20px/80px 6px;
+    background-repeat: no-repeat;
+    border-width: 45px 10px;
+    min-height: 480px;
+    max-height: 90vh;
+    object-fit: cover;
+    object-position: top left;
+  }
+}
+
+/* desktop view */
+
+@media screen and (min-width: 62em) {
+  .laptop {
+    background: radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, .4) 49%, transparent 50%) 50% -14px/10px 10px;
+    background-repeat: no-repeat;
+    border-width: 15px 10px 30px;
+  }
+  
+  .laptop-base {
+    background-color: #051d27;
+    border-radius: 0 0 15px 15px;
+    display: block;
+    height: 24px;
+    margin-left: -5%;
+    margin-top: -20px;
+    position: relative;
+    width: 110%;
+  }
+  
+  .laptop-base::after {
+    content: '';
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 0 0 5px 5px;
+    display: block;
+    height: 5px;
+    margin: 0 auto;
+    width: 50px;
+  }
+}
